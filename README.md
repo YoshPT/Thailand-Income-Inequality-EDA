@@ -58,5 +58,6 @@ Therefore, these KPIs should not be directly compared to national inequality ind
 2. To run and interact with the code, click the **"Open in Colab"** badge at the top of the notebook.
 3. The dataset will be automatically downloaded within the first code cell via `wget`. No manual data upload is required.
 
+👉 **[View the full notebook with interactive plots on nbviewer](https://nbviewer.org/github/YoshPT/Thailand-Income-Inequality-EDA/blob/main/mini_Hackathon_week_1.ipynb)**
 ---
 *Created by Poomrat Thanapasee | Connect with me on [LinkedIn](https://www.linkedin.com/in/poomrat-thanapasee-6a99443b3/)*
