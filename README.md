@@ -19,7 +19,7 @@ Secondary, aggregated data from the National Statistical Office (NSO) of Thailan
 * **Size:** 7,700 records × 11 columns = 77 provinces × 10 socio-economic classes × 10 income-source rows.
 * **Unit:** Baht per month. Each value is a *group average* (province × occupational class), not a household record.
 * **Structure:** the `value` column mixes hierarchy levels (total → regular / irregular → monetary / non-monetary → individual sources), so totals and their components must never be added together.
-* **Boundaries (Q2 maps only):** province boundaries are downloaded from [OpenGISData-Thailand](https://github.com/chingchai/OpenGISData-Thailand) on the first run.
+* **Province boundaries (Q2 maps only):** `provinces.geojson`, from the [OpenGISData-Thailand](https://github.com/chingchai/OpenGISData-Thailand) project. The notebook downloads it automatically on the first run.
 
 ---
 
@@ -116,9 +116,8 @@ All steps run in one cell, work on a copy of the raw data, and are written to th
 1. Open `final_5_fixed_v10-2.ipynb` in Google Colab (upload it, or open it from GitHub via Colab). Rename the file if you like and update this line.
 2. Run the cells **in order from the top**. The cleaning cell (Section 3) must run before the analysis cells, and later sections reuse objects defined earlier (e.g. `gini()` from 4.2 and the 80,000-baht threshold from 4.1).
 3. The first code cell downloads the dataset (`avg_income.csv`) and the Thai font with `wget`, so no manual upload is needed. If the dataset link has expired, place `avg_income.csv` in the working directory and skip the `wget` line.
-4. The Q2 cell downloads `provinces.geojson` on its first run, so it needs an internet connection. If the download fails, save the file from the OpenGISData-Thailand repository next to the notebook and re-run the cell.
+4. The Q2 cell also downloads the province boundaries (`provinces.geojson`) automatically on its first run, so it needs an internet connection.
 5. **Outputs:** `data_quality_audit_log.csv` (one row appended per run) and the figures `fig1_overall_dist.png`, `fig4_cv_by_occ2.png`, `q1_income_by_occupation.png`, `q2_geographic_inequality_map.png`, `q2_top15_gini.png` and `q3_income_structure.png`.
-
 
 ---
 *Created by Poomrat Thanapasee | Connect with me on [LinkedIn](https://www.linkedin.com/in/poomrat-thanapasee-6a99443b3/)*
