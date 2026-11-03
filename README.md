@@ -153,25 +153,37 @@ A table generated directly from the data, so its numbers always match the charts
 
 ---
 
-## 🔎 Key Findings
-* **Occupation gap:** managers/professionals earn about **48.3K** baht/month vs. about **15.8K** for agricultural laborers — roughly **3.1×**. Both are employees, so the widest gap is *inside* the employee group; among farmers the gap is only about 1.3× (21.6K–28.9K).
-* **Between-group inequality is moderate:** Gini ≈ **0.26** across all 745 province × occupation groups. By primary group, farmers are highest (≈ 0.30) and business owners and non-working households lowest (≈ 0.14). By sub-occupation, fishing/forestry is highest (≈ 0.34).
-* **Top provinces need a caveat:** Chanthaburi ranks first on Gini (≈ 0.40) mainly because one group (tenant farmers, ≈ 181K baht/month, about 6.9× that occupation's median) sits far above the rest and may reflect a small sample. Si Sa Ket, Nong Bua Lamphu and Ratchaburi in the top 15 are affected by a single extreme cell in the same way, so their rankings should be read with care.
-* **Income structure:** employees get roughly **67–78%** of income from wages. Farmers, fishers and the self-employed get roughly **66–75%** from business/farm profit, which is volatile and can turn negative; 67–76% of their income comes from volatile sources, so all four groups are flagged as risky.
-* **Transfers are small for working groups but not for everyone:** government/other transfers are only about **5–7%** of income in the nine working groups, yet they are the **main source (≈ 58%)** for non-working households, whose average income is ≈ 19.5K baht (rank 8 of 10).
+### 🔎 Key Findings
+
+- **Occupation gap:** managers/professionals earn about 48.3K baht/month vs. about 15.8K for agricultural laborers — roughly 3.1×. Both are employees, so the widest gap is inside the employee group; among farmers the gap is only about 1.3× (21.6K–28.9K).
+- **Between-group inequality is moderate:** Gini ≈ 0.26 across all 745 province × occupation groups. By primary group, farmers are highest (≈ 0.30) and business owners and non-working households lowest (≈ 0.14). By sub-occupation, fishing/forestry is highest (≈ 0.34).
+- **Top provinces need a caveat:** Chanthaburi ranks first on Gini (≈ 0.40) mainly because one group (tenant farmers, ≈ 181K baht/month, about 6.9× that occupation's median) sits far above the rest and may reflect a small sample. Si Sa Ket, Nong Bua Lamphu and Ratchaburi in the top 15 are affected by a single extreme cell in the same way, so their rankings should be read with care.
+- **Income structure:** employees get roughly 67–78% of income from wages. Farmers, fishers and the self-employed get roughly 66–75% from business/farm profit, which is volatile and can turn negative; 67–76% of their income comes from volatile sources, so all four groups are flagged as risky.
+- **Transfers are small for working groups but not for everyone:** government/other transfers are only about 5–7% of income in the nine working groups, yet they are the main source (≈ 58%) for non-working households, whose average income is ≈ 19.5K baht (rank 8 of 10).
+
 
 ---
 
-## ⚠️ Methodological Notes & Data Limitations
-* The dataset holds **group averages without household counts or population weights**. The Gini figures therefore measure the **gap between groups (province × occupation), unweighted** — not household-level inequality.
-* They are **not comparable** with official national indices built from microdata (Thailand's official income Gini is roughly 0.4+). Hidden within-group inequality would make the true figures higher.
-* **Q2 measures the spread between occupations inside a province**, not inequality among households inside it.
-* Province-level Gini rests on only **7–10 groups per province** and is sensitive to small samples and single extreme cells (see the white diamonds in the top-15 chart for the value without them).
-* **Negative values (36 rows) were kept** and counted in every analysis. A sensitivity test shows that removing them would change the Q3 income shares by at most about **0.2 percentage points**.
-* **25 total-income cells flagged "W" were set to `NaN`** and excluded, so averages use 64–77 provinces per occupation.
-* All averages across provinces are **unweighted** (each province counts equally regardless of population).
-* The "non-working" group (households with no economic activity but with income) is **included** in all analyses, as part of all households.
-* Single-province effects (e.g. Chanthaburi tenant farmers) are flagged but **not removed**; read medians alongside means.
+### ⚠️ Methodological Notes & Data Limitations
+
+**What the Gini measures**
+
+- The dataset holds group averages without household counts or population weights, so the Gini figures measure the **gap between groups** (province × occupation), unweighted. They do not measure household-level inequality. Q2 applies this within each province: it captures the spread between occupations, not inequality among households.
+- The overall Gini (≈ 0.26) is calculated across all 745 province × occupation groups, while the province-level Gini (maps and top-15 chart) is calculated within each province.
+- These figures are not comparable with official indices built from microdata. Published household income Gini estimates for Thailand vary by source and definition (roughly 0.3–0.5), and hidden within-group inequality would likely make the true figures higher.
+- Province-level Gini rests on only 7–10 groups per province, so it is sensitive to small samples and single extreme cells. The white diamonds in the top-15 chart show the value without them.
+
+**Data handling**
+
+- Negative values (36 rows) were kept rather than removed. 32 of them are negative net farm profit and enter the Q3 income structure; the other 4 are in aggregate income columns (total monthly, monetary and regular income) that Q3 does not use. A sensitivity test that drops all negative rows changes the Q3 income shares by at most about 0.2 percentage points.
+- 25 total-income cells flagged "0^W" in the source (the survey sample value is 0, and every income type in those cells is 0) were set to `NaN` and excluded, so averages use 64–77 provinces per occupation.
+- The "non-working" group (households with no economic activity but with income) is included in all analyses, as part of all households.
+
+**How to read the results**
+
+- All averages across provinces are unweighted: each province counts equally regardless of population.
+- Single-province effects (e.g. Chanthaburi tenant farmers) are flagged but not removed, so read medians alongside means.
+
 
 ---
 
