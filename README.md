@@ -83,10 +83,73 @@ All steps run in one cell, work on a copy of the raw data, and are written to th
 * **4.3 Variation within each sub-occupation (between provinces):** CV and a robust CV (IQR / 1.349 ÷ median) that resists extreme values.
 
 ### 5️⃣ Data Storytelling (3 questions)
-* **Q1 — Who earns what?** One bar per sub-occupation, grouped by primary group, with the highest and lowest highlighted, median markers, the mean line, and the max/min gap inside each group. `*` marks a group whose average is pulled up by a single province.
-* **Q2 — Where is the gap?** Three province maps: (1) average income, (2) between-occupation Gini with the top 5 labelled, and (3) a "what to focus on" map that splits provinces at the median income (25,395 baht) and median Gini (0.218) into four groups: low income + high gap (18 provinces), high income + high gap (20), low income + low gap (21) and high income + low gap (18). A ranked top 15 bar chart (coloured by region) shows each province's Gini and its value after excluding cells above 80,000 baht.
-* **Q3 — Where does income come from?** 100% stacked bars of six income types per sub-occupation (wages, business/farm profit, irregular income, non-monetary income, transfers, property income), sorted by wage share. Each row shows the main source and the share from volatile sources (business/farm profit + irregular income); a group is marked "risky" when that share is 50% or more. Only the lowest-level components are used, so nothing is double-counted.
-* **Policy observations:** a table generated directly from the data, so its numbers always match the charts.
+
+#### Q1 — Who earns what?
+
+One bar per sub-occupation, grouped by primary group, with the highest and lowest highlighted, median markers, the mean line, and the max/min gap inside each group. `*` marks a group whose average is pulled up by a single province.
+
+<p align="center">
+  <a href="images/q1_income_by_occupation-2.png">
+    <img src="images/q1_income_by_occupation-2.png" alt="Bar chart of household income by sub-occupation, grouped by primary occupation group" width="800">
+  </a>
+</p>
+
+#### Q2 — Where is the gap?
+
+Three province maps: (1) average income, (2) between-occupation Gini with the top 5 labelled, and (3) a "what to focus on" map that splits provinces into four groups by income and gap.
+
+<p align="center">
+  <a href="images/q2_geographic_inequality_map.png">
+    <img src="images/q2_geographic_inequality_map.png" alt="Three maps of Thai provinces showing average income, between-occupation Gini, and four focus groups" width="800">
+  </a>
+</p>
+
+<details>
+<summary>How the four groups are defined</summary>
+
+<br>
+
+Provinces are split at the median income (25,395 baht) and median Gini (0.218):
+
+- Low income + high gap: 18 provinces
+- High income + high gap: 20 provinces
+- Low income + low gap: 21 provinces
+- High income + low gap: 18 provinces
+
+</details>
+
+A ranked top 15 bar chart (coloured by region) shows each province's Gini and its value after excluding cells above 80,000 baht.
+
+<p align="center">
+  <a href="images/q2_top15_gini.png">
+    <img src="images/q2_top15_gini.png" alt="Top 15 provinces by between-occupation Gini, coloured by region" width="800">
+  </a>
+</p>
+
+#### Q3 — Where does income come from?
+
+100% stacked bars of six income types per sub-occupation, sorted by wage share. Each row shows the main source and the share from volatile sources (business/farm profit + irregular income). A group is marked "risky" when that share is 50% or more.
+
+> **💡 Insight:** 4 of 10 groups (fishing/forestry, self-employed, and both farmer groups) get 67–76% of their income from volatile sources, versus only 5–8% for the five employee groups. Non-working households depend on transfers for 58% of income.
+
+<p align="center">
+  <a href="images/q3_income_structure.png">
+    <img src="images/q3_income_structure.png" alt="100% stacked bars of income sources per sub-occupation, sorted by wage share" width="800">
+  </a>
+</p>
+
+<details>
+<summary>Income types and method</summary>
+
+<br>
+
+The six income types are wages, business/farm profit, irregular income, non-monetary income, transfers, and property income. Only the lowest-level components are used, so nothing is double-counted.
+
+</details>
+
+#### Policy observations
+
+A table generated directly from the data, so its numbers always match the charts.
 
 ---
 
