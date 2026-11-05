@@ -4,7 +4,7 @@
 > *Developed as part of the Super AI Engineer Season 6 (Mini-Hackathon Level 1).*
 
 ![Python](https://img.shields.io/badge/Python-Pandas%20%7C%20NumPy-3776AB?logo=python&logoColor=white)
-![Viz](https://img.shields.io/badge/Viz-Matplotlib%20%7C%20Seaborn-11557c)
+![Visualization](https://img.shields.io/badge/Visualization-Matplotlib%20%7C%20Seaborn-11557c)
 ![Data](https://img.shields.io/badge/Data-NSO%20Thailand%202566%20B.E.-green)
 ![Type](https://img.shields.io/badge/Type-EDA%20%2F%20Data%20Storytelling-orange)
 
@@ -197,10 +197,6 @@ The six income types are wages, business/farm profit, irregular income, non-mone
 
 </details>
 
-#### Policy observations
-
-A table generated directly from the data, so its numbers always match the charts.
-
 ---
 
 ## 🔎 Key Findings
@@ -241,7 +237,7 @@ A table generated directly from the data, so its numbers always match the charts
 
 ## 🚀 How to Run the Code
 
-1. **Open the notebook.** Open `mini_Hackathon_week_1.ipynb` in Google Colab (upload it, or open it from GitHub via Colab). Rename the file if you like and update this line.
+1. **Open the notebook.** Open `mini_Hackathon_week_1.ipynb` in Google Colab (upload it, or open it from GitHub via Colab).
 2. **Run the cells in order from the top.** The cleaning cell (Section 3) must run before the analysis cells, and later sections reuse objects defined earlier (e.g. `gini()` from 4.2 and the 80,000-baht threshold from 4.1).
 3. **Data and font download automatically.** The first code cell downloads the dataset (`avg_income.csv`) and the Thai font with `wget`, so no manual upload is needed. If the dataset link has expired, place `avg_income.csv` in the working directory and skip the `wget` line.
 4. **Internet is needed for the Q2 maps.** The Q2 cell also downloads the province boundaries (`provinces.geojson`) automatically on its first run.
