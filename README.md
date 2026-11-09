@@ -95,7 +95,7 @@ All steps run in one cell, work on a copy of the raw data, and are written to th
 | 2 | Drop duplicates | 0 | 0 |
 | 3 | Fill null `attribute` with "ไม่มี" ("none") | 0 | 6,865 |
 | 4 | **Keep** negative values (36 rows) and add an `is_negative` flag. 32 are net farm-profit losses; the other 4 are totals that include them | 0 | 0 |
-| 5 | Total-income rows with a "W" footnote (sample-based zero) → `NaN`, treated as "no data", not imputed | 0 | 25 |
+| 5 | Every row in the 25 province × occupation cells whose total income has a "W" footnote (sample-based zero) → `NaN` (25 cells × 10 rows), treated as "no data", not imputed | 0 | 250 |
 | 6 | Add concise labels: `occ1` (4 primary groups) and `occ2` (10 sub-occupations) | 0 | 0 |
 | 7 | Check the nested hierarchy: total = sum of components | 0 | 0 |
 
@@ -225,7 +225,7 @@ The six income types are wages, business/farm profit, irregular income, non-mone
 ### Data handling
 
 - Negative values (36 rows) were kept rather than removed. 32 of them are negative net farm profit and enter the Q3 income structure; the other 4 are in aggregate income columns (total monthly, monetary and regular income) that Q3 does not use. A sensitivity test that drops all negative rows changes the Q3 income shares by at most about 0.2 percentage points.
-- 25 total-income cells flagged "0^W" in the source (the survey sample value is 0, and every income type in those cells is 0) were set to `NaN` and excluded, so averages use 64–77 provinces per occupation.
+- 25 total-income cells flagged "0^W" in the source (the survey sample value is 0, and every income type in those cells is 0) were set to `NaN` (all 10 rows in each cell, 250 rows in total) and excluded, so averages use 64–77 provinces per occupation.
 - The "non-working" group (households with no economic activity but with income) is included in all analyses, as part of all households.
 
 ### How to read the results
